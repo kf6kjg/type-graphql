@@ -1,3 +1,2 @@
 export * from "./aliases";
-export * from "./isodate";
-export * from "./timestamp";
+export { GraphQLTimestamp, GraphQLDateTime as GraphQLISODateTime } from "graphql-scalars";

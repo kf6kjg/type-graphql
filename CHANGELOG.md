@@ -5,6 +5,8 @@
 ### Features
 - **Breaking Change**: `AuthChecker` type is now "function or class" - update to `AuthCheckerFn` if the function form is needed in the code
 - **Breaking Change**: update `graphql-js` peer dependency to `^16.6.0`
+- **Breaking Change**: removed `dateScalarMode` option from `buildSchema`
+- **Breaking Change**: make `graphql-scalars` package a peer dependency and use date scalars from it instead of custom ones
 - support class-based auth checker, which allows for dependency injection
 - allow defining directives for interface types and theirs fields, with inheritance for object types fields (#744)
 - allow deprecating input fields and args (#794)

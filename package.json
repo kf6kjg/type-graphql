@@ -22,7 +22,8 @@
   },
   "peerDependencies": {
     "class-validator": ">=0.14.0",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "graphql-scalars": "^1.20.0"
   },
   "dependencies": {
     "@types/node": "*",
@@ -53,6 +54,7 @@
     "del": "^7.0.0",
     "graphql": "^16.6.0",
     "graphql-redis-subscriptions": "^2.6.0",
+    "graphql-scalars": "^1.20.4",
     "graphql-tag": "^2.12.6",
     "husky": "^4.3.8",
     "ioredis": "^5.3.0",

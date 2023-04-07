@@ -39,20 +39,18 @@
   "exports": {
     ".": {
       "require": "./build/cjs/index.js",
-      "import": "./build/esm/index.js",
-      "types": "./build/typings/index.d.ts"
+      "import": "./build/esm/index.js"
     }
   },
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",
-  "types": "./build/typings/index.d.ts",
   "files": [
     "./build"
   ],
   "scripts": {
     "prebuild": "npm run clean && npm run check:version",
-    "build": "npx tsc --build ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.typings.json",
-    "postbuild": "npx shx rm ./build/typings/browser-shim.d.ts && npx shx cp ./src/browser-shim.ts ./build/typings && npx ts-node ./scripts/package.json.ts",
+    "build": "npx tsc --build ./tsconfig.cjs.json ./tsconfig.cjs.d.json ./tsconfig.esm.json ./tsconfig.esm.d.json",
+    "postbuild": "npx shx rm ./build/*/browser-shim.d.ts && npx shx cp ./src/browser-shim.ts ./build/cjs && npx shx cp ./src/browser-shim.ts ./build/esm && npx ts-node ./scripts/package.json.ts",
     "prebuild:benchmarks": "npm run clean",
     "build:benchmarks": "npx tsc --project ./benchmarks/tsconfig.json",
     "build:examples": "npm run --prefix ./examples build",
@@ -65,9 +63,7 @@
     "check:type": "npx npm-run-all --npm-path npm \"check:type:*\"",
     "check:type:cjs": "npx tsc --project ./tsconfig.cjs.json --noEmit",
     "check:type:esm": "npx tsc --project ./tsconfig.esm.json --noEmit",
-    "check:type:typings": "npx tsc --project ./tsconfig.typings.json --noEmit --emitDeclarationOnly false",
     "check:type:benchmarks": "npx tsc --project ./benchmarks/tsconfig.json --noEmit",
-    "precheck:type:examples": "npx tsc --project ./tsconfig.typings.json",
     "check:type:examples": "npx tsc --project ./examples/tsconfig.json --noEmit",
     "check:type:scripts": "npx tsc --project ./scripts/tsconfig.json --noEmit",
     "check:version": "npx ts-node ./scripts/version.ts",

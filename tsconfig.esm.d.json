@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.esm.json",
+  "compilerOptions": {
+    // See https://github.com/webstrand/typescript-remove-comments-not-from-declarations for the source of inspiration.
+
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "removeComments": false,
+
+    // performance enhancement
+    "disableSolutionSearching": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
+  }
+}

@@ -1,0 +1,1737 @@
+diff --git a/node_modules/class-validator/types/decorator/ValidationOptions.d.ts b/node_modules/class-validator/types/decorator/ValidationOptions.d.ts
+index d174267..fdcd2e4 100644
+--- a/node_modules/class-validator/types/decorator/ValidationOptions.d.ts
++++ b/node_modules/class-validator/types/decorator/ValidationOptions.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationArguments } from '../validation/ValidationArguments';
++import { ValidationArguments } from '../validation/ValidationArguments.js';
+ /**
+  * Options used to pass to validation decorators.
+  */
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayContains.d.ts b/node_modules/class-validator/types/decorator/array/ArrayContains.d.ts
+index 43cf8a9..c71a3e4 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayContains.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayContains.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_CONTAINS = "arrayContains";
+ /**
+  * Checks if array contains all values from the given array of values.
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayMaxSize.d.ts b/node_modules/class-validator/types/decorator/array/ArrayMaxSize.d.ts
+index 0fa773f..b362d11 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayMaxSize.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayMaxSize.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_MAX_SIZE = "arrayMaxSize";
+ /**
+  * Checks if the array's length is less or equal to the specified number.
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayMinSize.d.ts b/node_modules/class-validator/types/decorator/array/ArrayMinSize.d.ts
+index 66df2c0..ac028c8 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayMinSize.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayMinSize.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_MIN_SIZE = "arrayMinSize";
+ /**
+  * Checks if the array's length is greater than or equal to the specified number.
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayNotContains.d.ts b/node_modules/class-validator/types/decorator/array/ArrayNotContains.d.ts
+index cae551e..593daf6 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayNotContains.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayNotContains.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_NOT_CONTAINS = "arrayNotContains";
+ /**
+  * Checks if array does not contain any of the given values.
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayNotEmpty.d.ts b/node_modules/class-validator/types/decorator/array/ArrayNotEmpty.d.ts
+index 6ce88ad..ce97fd2 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayNotEmpty.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayNotEmpty.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_NOT_EMPTY = "arrayNotEmpty";
+ /**
+  * Checks if given array is not empty.
+diff --git a/node_modules/class-validator/types/decorator/array/ArrayUnique.d.ts b/node_modules/class-validator/types/decorator/array/ArrayUnique.d.ts
+index 57edab0..dbb70c1 100644
+--- a/node_modules/class-validator/types/decorator/array/ArrayUnique.d.ts
++++ b/node_modules/class-validator/types/decorator/array/ArrayUnique.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const ARRAY_UNIQUE = "arrayUnique";
+ export type ArrayUniqueIdentifier<T = any> = (o: T) => any;
+ /**
+diff --git a/node_modules/class-validator/types/decorator/common/Allow.d.ts b/node_modules/class-validator/types/decorator/common/Allow.d.ts
+index 6516605..e6c5dd0 100644
+--- a/node_modules/class-validator/types/decorator/common/Allow.d.ts
++++ b/node_modules/class-validator/types/decorator/common/Allow.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * If object has both allowed and not allowed properties a validation error will be thrown.
+  */
+diff --git a/node_modules/class-validator/types/decorator/common/Equals.d.ts b/node_modules/class-validator/types/decorator/common/Equals.d.ts
+index 266f963..092568f 100644
+--- a/node_modules/class-validator/types/decorator/common/Equals.d.ts
++++ b/node_modules/class-validator/types/decorator/common/Equals.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const EQUALS = "equals";
+ /**
+  * Checks if value matches ("===") the comparison.
+diff --git a/node_modules/class-validator/types/decorator/common/IsDefined.d.ts b/node_modules/class-validator/types/decorator/common/IsDefined.d.ts
+index 7d38bda..e09db05 100644
+--- a/node_modules/class-validator/types/decorator/common/IsDefined.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsDefined.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_DEFINED: string;
+ /**
+  * Checks if value is defined (!== undefined, !== null).
+diff --git a/node_modules/class-validator/types/decorator/common/IsEmpty.d.ts b/node_modules/class-validator/types/decorator/common/IsEmpty.d.ts
+index b2bc39e..7aeb6e8 100644
+--- a/node_modules/class-validator/types/decorator/common/IsEmpty.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsEmpty.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_EMPTY = "isEmpty";
+ /**
+  * Checks if given value is empty (=== '', === null, === undefined).
+diff --git a/node_modules/class-validator/types/decorator/common/IsIn.d.ts b/node_modules/class-validator/types/decorator/common/IsIn.d.ts
+index 21dfe62..f6bf8c0 100644
+--- a/node_modules/class-validator/types/decorator/common/IsIn.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsIn.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_IN = "isIn";
+ /**
+  * Checks if given value is in a array of allowed values.
+diff --git a/node_modules/class-validator/types/decorator/common/IsLatLong.d.ts b/node_modules/class-validator/types/decorator/common/IsLatLong.d.ts
+index 33274d9..e7acf64 100644
+--- a/node_modules/class-validator/types/decorator/common/IsLatLong.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsLatLong.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LATLONG = "isLatLong";
+ /**
+  * Checks if a value is string in format a "latitude,longitude".
+diff --git a/node_modules/class-validator/types/decorator/common/IsLatitude.d.ts b/node_modules/class-validator/types/decorator/common/IsLatitude.d.ts
+index 9f29071..016b26f 100644
+--- a/node_modules/class-validator/types/decorator/common/IsLatitude.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsLatitude.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LATITUDE = "isLatitude";
+ /**
+  * Checks if a given value is a latitude.
+diff --git a/node_modules/class-validator/types/decorator/common/IsLongitude.d.ts b/node_modules/class-validator/types/decorator/common/IsLongitude.d.ts
+index 2f8ab23..4e0cad1 100644
+--- a/node_modules/class-validator/types/decorator/common/IsLongitude.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsLongitude.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LONGITUDE = "isLongitude";
+ /**
+  * Checks if a given value is a longitude.
+diff --git a/node_modules/class-validator/types/decorator/common/IsNotEmpty.d.ts b/node_modules/class-validator/types/decorator/common/IsNotEmpty.d.ts
+index 01aec18..7ff3b3b 100644
+--- a/node_modules/class-validator/types/decorator/common/IsNotEmpty.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsNotEmpty.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_NOT_EMPTY = "isNotEmpty";
+ /**
+  * Checks if given value is not empty (!== '', !== null, !== undefined).
+diff --git a/node_modules/class-validator/types/decorator/common/IsNotIn.d.ts b/node_modules/class-validator/types/decorator/common/IsNotIn.d.ts
+index 8d5be66..d1550c9 100644
+--- a/node_modules/class-validator/types/decorator/common/IsNotIn.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsNotIn.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_NOT_IN = "isNotIn";
+ /**
+  * Checks if given value not in a array of allowed values.
+diff --git a/node_modules/class-validator/types/decorator/common/IsOptional.d.ts b/node_modules/class-validator/types/decorator/common/IsOptional.d.ts
+index 47d58ae..3fa508b 100644
+--- a/node_modules/class-validator/types/decorator/common/IsOptional.d.ts
++++ b/node_modules/class-validator/types/decorator/common/IsOptional.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * Checks if value is missing and if so, ignores all validators.
+  */
+diff --git a/node_modules/class-validator/types/decorator/common/NotEquals.d.ts b/node_modules/class-validator/types/decorator/common/NotEquals.d.ts
+index 9bb18fa..60e1cdf 100644
+--- a/node_modules/class-validator/types/decorator/common/NotEquals.d.ts
++++ b/node_modules/class-validator/types/decorator/common/NotEquals.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const NOT_EQUALS = "notEquals";
+ /**
+  * Checks if value does not match ("!==") the comparison.
+diff --git a/node_modules/class-validator/types/decorator/common/Validate.d.ts b/node_modules/class-validator/types/decorator/common/Validate.d.ts
+index 1857963..c1cb7c7 100644
+--- a/node_modules/class-validator/types/decorator/common/Validate.d.ts
++++ b/node_modules/class-validator/types/decorator/common/Validate.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * Registers custom validator class.
+  */
+diff --git a/node_modules/class-validator/types/decorator/common/ValidateBy.d.ts b/node_modules/class-validator/types/decorator/common/ValidateBy.d.ts
+index 7568fdb..8f2438a 100644
+--- a/node_modules/class-validator/types/decorator/common/ValidateBy.d.ts
++++ b/node_modules/class-validator/types/decorator/common/ValidateBy.d.ts
+@@ -1,6 +1,6 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import { ValidationArguments } from '../../validation/ValidationArguments';
+-import { ValidatorConstraintInterface } from '../../validation/ValidatorConstraintInterface';
++import { ValidationOptions } from '../ValidationOptions.js';
++import { ValidationArguments } from '../../validation/ValidationArguments.js';
++import { ValidatorConstraintInterface } from '../../validation/ValidatorConstraintInterface.js';
+ export interface ValidateByOptions {
+     name: string;
+     constraints?: any[];
+diff --git a/node_modules/class-validator/types/decorator/common/ValidateIf.d.ts b/node_modules/class-validator/types/decorator/common/ValidateIf.d.ts
+index de2c447..bc7dd01 100644
+--- a/node_modules/class-validator/types/decorator/common/ValidateIf.d.ts
++++ b/node_modules/class-validator/types/decorator/common/ValidateIf.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * Ignores the other validators on a property when the provided condition function returns false.
+  */
+diff --git a/node_modules/class-validator/types/decorator/common/ValidateNested.d.ts b/node_modules/class-validator/types/decorator/common/ValidateNested.d.ts
+index 667af5f..fb1c886 100644
+--- a/node_modules/class-validator/types/decorator/common/ValidateNested.d.ts
++++ b/node_modules/class-validator/types/decorator/common/ValidateNested.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * Objects / object arrays marked with this decorator will also be validated.
+  */
+diff --git a/node_modules/class-validator/types/decorator/common/ValidatePromise.d.ts b/node_modules/class-validator/types/decorator/common/ValidatePromise.d.ts
+index c4032a0..5a374da 100644
+--- a/node_modules/class-validator/types/decorator/common/ValidatePromise.d.ts
++++ b/node_modules/class-validator/types/decorator/common/ValidatePromise.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ /**
+  * Resolve promise before validation
+  */
+diff --git a/node_modules/class-validator/types/decorator/date/MaxDate.d.ts b/node_modules/class-validator/types/decorator/date/MaxDate.d.ts
+index e5841e0..429cafa 100644
+--- a/node_modules/class-validator/types/decorator/date/MaxDate.d.ts
++++ b/node_modules/class-validator/types/decorator/date/MaxDate.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MAX_DATE = "maxDate";
+ /**
+  * Checks if the value is a date that's before the specified date.
+diff --git a/node_modules/class-validator/types/decorator/date/MinDate.d.ts b/node_modules/class-validator/types/decorator/date/MinDate.d.ts
+index e51bfc6..19e1f1c 100644
+--- a/node_modules/class-validator/types/decorator/date/MinDate.d.ts
++++ b/node_modules/class-validator/types/decorator/date/MinDate.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MIN_DATE = "minDate";
+ /**
+  * Checks if the value is a date that's after the specified date.
+diff --git a/node_modules/class-validator/types/decorator/decorators.d.ts b/node_modules/class-validator/types/decorator/decorators.d.ts
+index 5d1ad0c..e6a0133 100644
+--- a/node_modules/class-validator/types/decorator/decorators.d.ts
++++ b/node_modules/class-validator/types/decorator/decorators.d.ts
+@@ -1,111 +1,111 @@
+-export * from './common/Allow';
+-export * from './common/IsDefined';
+-export * from './common/IsOptional';
+-export * from './common/Validate';
+-export * from './common/ValidateBy';
+-export * from './common/ValidateIf';
+-export * from './common/ValidateNested';
+-export * from './common/ValidatePromise';
+-export * from './common/IsLatLong';
+-export * from './common/IsLatitude';
+-export * from './common/IsLongitude';
+-export * from './common/Equals';
+-export * from './common/NotEquals';
+-export * from './common/IsEmpty';
+-export * from './common/IsNotEmpty';
+-export * from './common/IsIn';
+-export * from './common/IsNotIn';
+-export * from './number/IsDivisibleBy';
+-export * from './number/IsPositive';
+-export * from './number/IsNegative';
+-export * from './number/Max';
+-export * from './number/Min';
+-export * from './date/MinDate';
+-export * from './date/MaxDate';
+-export * from './string/Contains';
+-export * from './string/NotContains';
+-export * from './string/IsAlpha';
+-export * from './string/IsAlphanumeric';
+-export * from './string/IsDecimal';
+-export * from './string/IsAscii';
+-export * from './string/IsBase64';
+-export * from './string/IsByteLength';
+-export * from './string/IsCreditCard';
+-export * from './string/IsCurrency';
+-export * from './string/IsEmail';
+-export * from './string/IsFQDN';
+-export * from './string/IsFullWidth';
+-export * from './string/IsHalfWidth';
+-export * from './string/IsVariableWidth';
+-export * from './string/IsHexColor';
+-export * from './string/IsHexadecimal';
+-export * from './string/IsMacAddress';
+-export * from './string/IsIP';
+-export * from './string/IsPort';
+-export * from './string/IsISBN';
+-export * from './string/IsISIN';
+-export * from './string/IsISO8601';
+-export * from './string/IsJSON';
+-export * from './string/IsJWT';
+-export * from './string/IsLowercase';
+-export * from './string/IsMobilePhone';
+-export * from './string/IsISO31661Alpha2';
+-export * from './string/IsISO31661Alpha3';
+-export * from './string/IsMongoId';
+-export * from './string/IsMultibyte';
+-export * from './string/IsSurrogatePair';
+-export * from './string/IsUrl';
+-export * from './string/IsUUID';
+-export * from './string/IsFirebasePushId';
+-export * from './string/IsUppercase';
+-export * from './string/Length';
+-export * from './string/MaxLength';
+-export * from './string/MinLength';
+-export * from './string/Matches';
+-export * from './string/IsPhoneNumber';
+-export * from './string/IsMilitaryTime';
+-export * from './string/IsHash';
+-export * from './string/IsISSN';
+-export * from './string/IsDateString';
+-export * from './string/IsBooleanString';
+-export * from './string/IsNumberString';
+-export * from './string/IsBase32';
+-export * from './string/IsBIC';
+-export * from './string/IsBtcAddress';
+-export * from './string/IsDataURI';
+-export * from './string/IsEAN';
+-export * from './string/IsEthereumAddress';
+-export * from './string/IsHSL';
+-export * from './string/IsIBAN';
+-export * from './string/IsIdentityCard';
+-export * from './string/IsISRC';
+-export * from './string/IsLocale';
+-export * from './string/IsMagnetURI';
+-export * from './string/IsMimeType';
+-export * from './string/IsOctal';
+-export * from './string/IsPassportNumber';
+-export * from './string/IsPostalCode';
+-export * from './string/IsRFC3339';
+-export * from './string/IsRgbColor';
+-export * from './string/IsSemVer';
+-export * from './string/IsStrongPassword';
+-export * from './string/IsTimeZone';
+-export * from './string/IsBase58';
+-export * from './string/is-tax-id';
+-export * from './string/is-iso4217-currency-code';
+-export * from './typechecker/IsBoolean';
+-export * from './typechecker/IsDate';
+-export * from './typechecker/IsNumber';
+-export * from './typechecker/IsEnum';
+-export * from './typechecker/IsInt';
+-export * from './typechecker/IsString';
+-export * from './typechecker/IsArray';
+-export * from './typechecker/IsObject';
+-export * from './array/ArrayContains';
+-export * from './array/ArrayNotContains';
+-export * from './array/ArrayNotEmpty';
+-export * from './array/ArrayMinSize';
+-export * from './array/ArrayMaxSize';
+-export * from './array/ArrayUnique';
+-export * from './object/IsNotEmptyObject';
+-export * from './object/IsInstance';
++export * from './common/Allow.js';
++export * from './common/IsDefined.js';
++export * from './common/IsOptional.js';
++export * from './common/Validate.js';
++export * from './common/ValidateBy.js';
++export * from './common/ValidateIf.js';
++export * from './common/ValidateNested.js';
++export * from './common/ValidatePromise.js';
++export * from './common/IsLatLong.js';
++export * from './common/IsLatitude.js';
++export * from './common/IsLongitude.js';
++export * from './common/Equals.js';
++export * from './common/NotEquals.js';
++export * from './common/IsEmpty.js';
++export * from './common/IsNotEmpty.js';
++export * from './common/IsIn.js';
++export * from './common/IsNotIn.js';
++export * from './number/IsDivisibleBy.js';
++export * from './number/IsPositive.js';
++export * from './number/IsNegative.js';
++export * from './number/Max.js';
++export * from './number/Min.js';
++export * from './date/MinDate.js';
++export * from './date/MaxDate.js';
++export * from './string/Contains.js';
++export * from './string/NotContains.js';
++export * from './string/IsAlpha.js';
++export * from './string/IsAlphanumeric.js';
++export * from './string/IsDecimal.js';
++export * from './string/IsAscii.js';
++export * from './string/IsBase64.js';
++export * from './string/IsByteLength.js';
++export * from './string/IsCreditCard.js';
++export * from './string/IsCurrency.js';
++export * from './string/IsEmail.js';
++export * from './string/IsFQDN.js';
++export * from './string/IsFullWidth.js';
++export * from './string/IsHalfWidth.js';
++export * from './string/IsVariableWidth.js';
++export * from './string/IsHexColor.js';
++export * from './string/IsHexadecimal.js';
++export * from './string/IsMacAddress.js';
++export * from './string/IsIP.js';
++export * from './string/IsPort.js';
++export * from './string/IsISBN.js';
++export * from './string/IsISIN.js';
++export * from './string/IsISO8601.js';
++export * from './string/IsJSON.js';
++export * from './string/IsJWT.js';
++export * from './string/IsLowercase.js';
++export * from './string/IsMobilePhone.js';
++export * from './string/IsISO31661Alpha2.js';
++export * from './string/IsISO31661Alpha3.js';
++export * from './string/IsMongoId.js';
++export * from './string/IsMultibyte.js';
++export * from './string/IsSurrogatePair.js';
++export * from './string/IsUrl.js';
++export * from './string/IsUUID.js';
++export * from './string/IsFirebasePushId.js';
++export * from './string/IsUppercase.js';
++export * from './string/Length.js';
++export * from './string/MaxLength.js';
++export * from './string/MinLength.js';
++export * from './string/Matches.js';
++export * from './string/IsPhoneNumber.js';
++export * from './string/IsMilitaryTime.js';
++export * from './string/IsHash.js';
++export * from './string/IsISSN.js';
++export * from './string/IsDateString.js';
++export * from './string/IsBooleanString.js';
++export * from './string/IsNumberString.js';
++export * from './string/IsBase32.js';
++export * from './string/IsBIC.js';
++export * from './string/IsBtcAddress.js';
++export * from './string/IsDataURI.js';
++export * from './string/IsEAN.js';
++export * from './string/IsEthereumAddress.js';
++export * from './string/IsHSL.js';
++export * from './string/IsIBAN.js';
++export * from './string/IsIdentityCard.js';
++export * from './string/IsISRC.js';
++export * from './string/IsLocale.js';
++export * from './string/IsMagnetURI.js';
++export * from './string/IsMimeType.js';
++export * from './string/IsOctal.js';
++export * from './string/IsPassportNumber.js';
++export * from './string/IsPostalCode.js';
++export * from './string/IsRFC3339.js';
++export * from './string/IsRgbColor.js';
++export * from './string/IsSemVer.js';
++export * from './string/IsStrongPassword.js';
++export * from './string/IsTimeZone.js';
++export * from './string/IsBase58.js';
++export * from './string/is-tax-id.js';
++export * from './string/is-iso4217-currency-code.js';
++export * from './typechecker/IsBoolean.js';
++export * from './typechecker/IsDate.js';
++export * from './typechecker/IsNumber.js';
++export * from './typechecker/IsEnum.js';
++export * from './typechecker/IsInt.js';
++export * from './typechecker/IsString.js';
++export * from './typechecker/IsArray.js';
++export * from './typechecker/IsObject.js';
++export * from './array/ArrayContains.js';
++export * from './array/ArrayNotContains.js';
++export * from './array/ArrayNotEmpty.js';
++export * from './array/ArrayMinSize.js';
++export * from './array/ArrayMaxSize.js';
++export * from './array/ArrayUnique.js';
++export * from './object/IsNotEmptyObject.js';
++export * from './object/IsInstance.js';
+diff --git a/node_modules/class-validator/types/decorator/number/IsDivisibleBy.d.ts b/node_modules/class-validator/types/decorator/number/IsDivisibleBy.d.ts
+index 4e61338..fa1df1f 100644
+--- a/node_modules/class-validator/types/decorator/number/IsDivisibleBy.d.ts
++++ b/node_modules/class-validator/types/decorator/number/IsDivisibleBy.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_DIVISIBLE_BY = "isDivisibleBy";
+ /**
+  * Checks if value is a number that's divisible by another.
+diff --git a/node_modules/class-validator/types/decorator/number/IsNegative.d.ts b/node_modules/class-validator/types/decorator/number/IsNegative.d.ts
+index 6998293..a044bc3 100644
+--- a/node_modules/class-validator/types/decorator/number/IsNegative.d.ts
++++ b/node_modules/class-validator/types/decorator/number/IsNegative.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_NEGATIVE = "isNegative";
+ /**
+  * Checks if the value is a negative number smaller than zero.
+diff --git a/node_modules/class-validator/types/decorator/number/IsPositive.d.ts b/node_modules/class-validator/types/decorator/number/IsPositive.d.ts
+index 998dbac..6a2faa7 100644
+--- a/node_modules/class-validator/types/decorator/number/IsPositive.d.ts
++++ b/node_modules/class-validator/types/decorator/number/IsPositive.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_POSITIVE = "isPositive";
+ /**
+  * Checks if the value is a positive number greater than zero.
+diff --git a/node_modules/class-validator/types/decorator/number/Max.d.ts b/node_modules/class-validator/types/decorator/number/Max.d.ts
+index bf7cd71..6dd79ed 100644
+--- a/node_modules/class-validator/types/decorator/number/Max.d.ts
++++ b/node_modules/class-validator/types/decorator/number/Max.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MAX = "max";
+ /**
+  * Checks if the first number is less than or equal to the second.
+diff --git a/node_modules/class-validator/types/decorator/number/Min.d.ts b/node_modules/class-validator/types/decorator/number/Min.d.ts
+index a470a3d..3b3d304 100644
+--- a/node_modules/class-validator/types/decorator/number/Min.d.ts
++++ b/node_modules/class-validator/types/decorator/number/Min.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MIN = "min";
+ /**
+  * Checks if the first number is greater than or equal to the second.
+diff --git a/node_modules/class-validator/types/decorator/object/IsInstance.d.ts b/node_modules/class-validator/types/decorator/object/IsInstance.d.ts
+index 382b2a6..ee5046c 100644
+--- a/node_modules/class-validator/types/decorator/object/IsInstance.d.ts
++++ b/node_modules/class-validator/types/decorator/object/IsInstance.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_INSTANCE = "isInstance";
+ /**
+  * Checks if the value is an instance of the specified object.
+diff --git a/node_modules/class-validator/types/decorator/object/IsNotEmptyObject.d.ts b/node_modules/class-validator/types/decorator/object/IsNotEmptyObject.d.ts
+index 8c25b2f..b3efeef 100644
+--- a/node_modules/class-validator/types/decorator/object/IsNotEmptyObject.d.ts
++++ b/node_modules/class-validator/types/decorator/object/IsNotEmptyObject.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_NOT_EMPTY_OBJECT = "isNotEmptyObject";
+ /**
+  * Checks if the value is valid Object & not empty.
+diff --git a/node_modules/class-validator/types/decorator/string/Contains.d.ts b/node_modules/class-validator/types/decorator/string/Contains.d.ts
+index 656b20f..8e46d0f 100644
+--- a/node_modules/class-validator/types/decorator/string/Contains.d.ts
++++ b/node_modules/class-validator/types/decorator/string/Contains.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const CONTAINS = "contains";
+ /**
+  * Checks if the string contains the seed.
+diff --git a/node_modules/class-validator/types/decorator/string/IsAlpha.d.ts b/node_modules/class-validator/types/decorator/string/IsAlpha.d.ts
+index d07838e..bb63038 100644
+--- a/node_modules/class-validator/types/decorator/string/IsAlpha.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsAlpha.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_ALPHA = "isAlpha";
+ /**
+  * Checks if the string contains only letters (a-zA-Z).
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isAlpha(value: unknown, locale?: ValidatorJS.AlphaLocale): boolean;
++export declare function isAlpha(value: unknown, locale?: ValidatorJS.default.AlphaLocale): boolean;
+ /**
+  * Checks if the string contains only letters (a-zA-Z).
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsAlpha(locale?: ValidatorJS.AlphaLocale, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsAlpha(locale?: ValidatorJS.default.AlphaLocale, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsAlphanumeric.d.ts b/node_modules/class-validator/types/decorator/string/IsAlphanumeric.d.ts
+index d03367b..7e01923 100644
+--- a/node_modules/class-validator/types/decorator/string/IsAlphanumeric.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsAlphanumeric.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_ALPHANUMERIC = "isAlphanumeric";
+ /**
+  * Checks if the string contains only letters and numbers.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isAlphanumeric(value: unknown, locale?: ValidatorJS.AlphanumericLocale): boolean;
++export declare function isAlphanumeric(value: unknown, locale?: ValidatorJS.default.AlphanumericLocale): boolean;
+ /**
+  * Checks if the string contains only letters and numbers.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsAlphanumeric(locale?: ValidatorJS.AlphanumericLocale, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsAlphanumeric(locale?: ValidatorJS.default.AlphanumericLocale, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsAscii.d.ts b/node_modules/class-validator/types/decorator/string/IsAscii.d.ts
+index 0cabfaf..0b64b5f 100644
+--- a/node_modules/class-validator/types/decorator/string/IsAscii.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsAscii.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ASCII = "isAscii";
+ /**
+  * Checks if the string contains ASCII chars only.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBIC.d.ts b/node_modules/class-validator/types/decorator/string/IsBIC.d.ts
+index cc7671b..6f795b2 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBIC.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBIC.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BIC = "isBIC";
+ /**
+  * Check if a string is a BIC (Bank Identification Code) or SWIFT code.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBase32.d.ts b/node_modules/class-validator/types/decorator/string/IsBase32.d.ts
+index cfa4e22..2172fe9 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBase32.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBase32.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BASE32 = "isBase32";
+ /**
+  * Checks if a string is base32 encoded.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBase58.d.ts b/node_modules/class-validator/types/decorator/string/IsBase58.d.ts
+index 9d4ff9c..d34bc19 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBase58.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBase58.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BASE58 = "isBase58";
+ /**
+  * Checks if a string is base58 encoded.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBase64.d.ts b/node_modules/class-validator/types/decorator/string/IsBase64.d.ts
+index b5edcfb..fc2a0ab 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBase64.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBase64.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BASE64 = "isBase64";
+ /**
+  * Checks if a string is base64 encoded.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBooleanString.d.ts b/node_modules/class-validator/types/decorator/string/IsBooleanString.d.ts
+index cb4cf6b..47da451 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBooleanString.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBooleanString.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BOOLEAN_STRING = "isBooleanString";
+ /**
+  * Checks if a string is a boolean.
+diff --git a/node_modules/class-validator/types/decorator/string/IsBtcAddress.d.ts b/node_modules/class-validator/types/decorator/string/IsBtcAddress.d.ts
+index 3548b9a..d186bc5 100644
+--- a/node_modules/class-validator/types/decorator/string/IsBtcAddress.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsBtcAddress.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BTC_ADDRESS = "isBtcAddress";
+ /**
+  * Check if the string is a valid BTC address.
+diff --git a/node_modules/class-validator/types/decorator/string/IsByteLength.d.ts b/node_modules/class-validator/types/decorator/string/IsByteLength.d.ts
+index 2bf6059..04285e0 100644
+--- a/node_modules/class-validator/types/decorator/string/IsByteLength.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsByteLength.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BYTE_LENGTH = "isByteLength";
+ /**
+  * Checks if the string's length (in bytes) falls in a range.
+diff --git a/node_modules/class-validator/types/decorator/string/IsCreditCard.d.ts b/node_modules/class-validator/types/decorator/string/IsCreditCard.d.ts
+index 8026f4a..07c88f2 100644
+--- a/node_modules/class-validator/types/decorator/string/IsCreditCard.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsCreditCard.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_CREDIT_CARD = "isCreditCard";
+ /**
+  * Checks if the string is a credit card.
+diff --git a/node_modules/class-validator/types/decorator/string/IsCurrency.d.ts b/node_modules/class-validator/types/decorator/string/IsCurrency.d.ts
+index b86e30d..95d5c95 100644
+--- a/node_modules/class-validator/types/decorator/string/IsCurrency.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsCurrency.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_CURRENCY = "isCurrency";
+ /**
+  * Checks if the string is a valid currency amount.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isCurrency(value: unknown, options?: ValidatorJS.IsCurrencyOptions): boolean;
++export declare function isCurrency(value: unknown, options?: ValidatorJS.default.IsCurrencyOptions): boolean;
+ /**
+  * Checks if the string is a valid currency amount.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsCurrency(options?: ValidatorJS.IsCurrencyOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsCurrency(options?: ValidatorJS.default.IsCurrencyOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsDataURI.d.ts b/node_modules/class-validator/types/decorator/string/IsDataURI.d.ts
+index 7583d93..e411301 100644
+--- a/node_modules/class-validator/types/decorator/string/IsDataURI.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsDataURI.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_DATA_URI = "isDataURI";
+ /**
+  * Check if the string is a data uri format.
+diff --git a/node_modules/class-validator/types/decorator/string/IsDateString.d.ts b/node_modules/class-validator/types/decorator/string/IsDateString.d.ts
+index 4ac3b85..c7693d6 100644
+--- a/node_modules/class-validator/types/decorator/string/IsDateString.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsDateString.d.ts
+@@ -1,11 +1,11 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_DATE_STRING = "isDateString";
+ /**
+  * Alias for IsISO8601 validator
+  */
+-export declare function isDateString(value: unknown, options?: ValidatorJS.IsISO8601Options): boolean;
++export declare function isDateString(value: unknown, options?: ValidatorJS.default.IsISO8601Options): boolean;
+ /**
+  * Alias for IsISO8601 validator
+  */
+-export declare function IsDateString(options?: ValidatorJS.IsISO8601Options, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsDateString(options?: ValidatorJS.default.IsISO8601Options, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsDecimal.d.ts b/node_modules/class-validator/types/decorator/string/IsDecimal.d.ts
+index 6afcba3..c4d7292 100644
+--- a/node_modules/class-validator/types/decorator/string/IsDecimal.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsDecimal.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_DECIMAL = "isDecimal";
+ /**
+  * Checks if the string is a valid decimal.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isDecimal(value: unknown, options?: ValidatorJS.IsDecimalOptions): boolean;
++export declare function isDecimal(value: unknown, options?: ValidatorJS.default.IsDecimalOptions): boolean;
+ /**
+  * Checks if the string is a valid decimal.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsDecimal(options?: ValidatorJS.IsDecimalOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsDecimal(options?: ValidatorJS.default.IsDecimalOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsEAN.d.ts b/node_modules/class-validator/types/decorator/string/IsEAN.d.ts
+index 0540443..830dd96 100644
+--- a/node_modules/class-validator/types/decorator/string/IsEAN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsEAN.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_EAN = "isEAN";
+ /**
+  * Check if the string is an EAN (European Article Number).
+diff --git a/node_modules/class-validator/types/decorator/string/IsEmail.d.ts b/node_modules/class-validator/types/decorator/string/IsEmail.d.ts
+index 2560929..807ada1 100644
+--- a/node_modules/class-validator/types/decorator/string/IsEmail.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsEmail.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_EMAIL = "isEmail";
+ /**
+  * Checks if the string is an email.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isEmail(value: unknown, options?: ValidatorJS.IsEmailOptions): boolean;
++export declare function isEmail(value: unknown, options?: ValidatorJS.default.IsEmailOptions): boolean;
+ /**
+  * Checks if the string is an email.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsEmail(options?: ValidatorJS.IsEmailOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsEmail(options?: ValidatorJS.default.IsEmailOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsEthereumAddress.d.ts b/node_modules/class-validator/types/decorator/string/IsEthereumAddress.d.ts
+index 5c449b2..6276c0b 100644
+--- a/node_modules/class-validator/types/decorator/string/IsEthereumAddress.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsEthereumAddress.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ETHEREUM_ADDRESS = "isEthereumAddress";
+ /**
+  * Check if the string is an Ethereum address using basic regex. Does not validate address checksums.
+diff --git a/node_modules/class-validator/types/decorator/string/IsFQDN.d.ts b/node_modules/class-validator/types/decorator/string/IsFQDN.d.ts
+index 3b350d8..55bc019 100644
+--- a/node_modules/class-validator/types/decorator/string/IsFQDN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsFQDN.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_FQDN = "isFqdn";
+ /**
+  * Checks if the string is a fully qualified domain name (e.g. domain.com).
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isFQDN(value: unknown, options?: ValidatorJS.IsFQDNOptions): boolean;
++export declare function isFQDN(value: unknown, options?: ValidatorJS.default.IsFQDNOptions): boolean;
+ /**
+  * Checks if the string is a fully qualified domain name (e.g. domain.com).
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsFQDN(options?: ValidatorJS.IsFQDNOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsFQDN(options?: ValidatorJS.default.IsFQDNOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsFirebasePushId.d.ts b/node_modules/class-validator/types/decorator/string/IsFirebasePushId.d.ts
+index 86168a3..6c22550 100644
+--- a/node_modules/class-validator/types/decorator/string/IsFirebasePushId.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsFirebasePushId.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_FIREBASE_PUSH_ID = "IsFirebasePushId";
+ /**
+  * Checks if the string is a Firebase Push Id
+diff --git a/node_modules/class-validator/types/decorator/string/IsFullWidth.d.ts b/node_modules/class-validator/types/decorator/string/IsFullWidth.d.ts
+index b434c5c..18853f8 100644
+--- a/node_modules/class-validator/types/decorator/string/IsFullWidth.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsFullWidth.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_FULL_WIDTH = "isFullWidth";
+ /**
+  * Checks if the string contains any full-width chars.
+diff --git a/node_modules/class-validator/types/decorator/string/IsHSL.d.ts b/node_modules/class-validator/types/decorator/string/IsHSL.d.ts
+index 905287f..96bd494 100644
+--- a/node_modules/class-validator/types/decorator/string/IsHSL.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsHSL.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_HSL = "isHSL";
+ /**
+  * Check if the string is an HSL (hue, saturation, lightness, optional alpha) color based on CSS Colors Level 4 specification.
+diff --git a/node_modules/class-validator/types/decorator/string/IsHalfWidth.d.ts b/node_modules/class-validator/types/decorator/string/IsHalfWidth.d.ts
+index 97c5306..c12a9de 100644
+--- a/node_modules/class-validator/types/decorator/string/IsHalfWidth.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsHalfWidth.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_HALF_WIDTH = "isHalfWidth";
+ /**
+  * Checks if the string contains any half-width chars.
+diff --git a/node_modules/class-validator/types/decorator/string/IsHash.d.ts b/node_modules/class-validator/types/decorator/string/IsHash.d.ts
+index 14a0d48..90b3234 100644
+--- a/node_modules/class-validator/types/decorator/string/IsHash.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsHash.d.ts
+@@ -1,12 +1,12 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_HASH = "isHash";
+ /**
+  * Check if the string is a hash of type algorithm.
+  * Algorithm is one of ['md4', 'md5', 'sha1', 'sha256', 'sha384', 'sha512', 'ripemd128', 'ripemd160', 'tiger128',
+  * 'tiger160', 'tiger192', 'crc32', 'crc32b']
+  */
+-export declare function isHash(value: unknown, algorithm: ValidatorJS.HashAlgorithm): boolean;
++export declare function isHash(value: unknown, algorithm: ValidatorJS.default.HashAlgorithm): boolean;
+ /**
+  * Check if the string is a hash of type algorithm.
+  * Algorithm is one of ['md4', 'md5', 'sha1', 'sha256', 'sha384', 'sha512', 'ripemd128', 'ripemd160', 'tiger128',
+diff --git a/node_modules/class-validator/types/decorator/string/IsHexColor.d.ts b/node_modules/class-validator/types/decorator/string/IsHexColor.d.ts
+index 34e9e42..c1afebe 100644
+--- a/node_modules/class-validator/types/decorator/string/IsHexColor.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsHexColor.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_HEX_COLOR = "isHexColor";
+ /**
+  * Checks if the string is a hexadecimal color.
+diff --git a/node_modules/class-validator/types/decorator/string/IsHexadecimal.d.ts b/node_modules/class-validator/types/decorator/string/IsHexadecimal.d.ts
+index f07f986..4fea9d3 100644
+--- a/node_modules/class-validator/types/decorator/string/IsHexadecimal.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsHexadecimal.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_HEXADECIMAL = "isHexadecimal";
+ /**
+  * Checks if the string is a hexadecimal number.
+diff --git a/node_modules/class-validator/types/decorator/string/IsIBAN.d.ts b/node_modules/class-validator/types/decorator/string/IsIBAN.d.ts
+index b5998b4..92acfe6 100644
+--- a/node_modules/class-validator/types/decorator/string/IsIBAN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsIBAN.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_IBAN = "isIBAN";
+ /**
+  * Check if a string is a IBAN (International Bank Account Number).
+diff --git a/node_modules/class-validator/types/decorator/string/IsIP.d.ts b/node_modules/class-validator/types/decorator/string/IsIP.d.ts
+index 39cad94..c6edfad 100644
+--- a/node_modules/class-validator/types/decorator/string/IsIP.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsIP.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export type IsIpVersion = '4' | '6' | 4 | 6;
+ export declare const IS_IP = "isIp";
+ /**
+diff --git a/node_modules/class-validator/types/decorator/string/IsISBN.d.ts b/node_modules/class-validator/types/decorator/string/IsISBN.d.ts
+index f65023c..422091d 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISBN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISBN.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export type IsISBNVersion = '10' | '13' | 10 | 13;
+ export declare const IS_ISBN = "isIsbn";
+ /**
+diff --git a/node_modules/class-validator/types/decorator/string/IsISIN.d.ts b/node_modules/class-validator/types/decorator/string/IsISIN.d.ts
+index bfdd537..5e8d49a 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISIN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISIN.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ISIN = "isIsin";
+ /**
+  * Checks if the string is an ISIN (stock/security identifier).
+diff --git a/node_modules/class-validator/types/decorator/string/IsISO31661Alpha2.d.ts b/node_modules/class-validator/types/decorator/string/IsISO31661Alpha2.d.ts
+index 6fb284d..a4de937 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISO31661Alpha2.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISO31661Alpha2.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ISO31661_ALPHA_2 = "isISO31661Alpha2";
+ /**
+  * Check if the string is a valid [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) officially assigned country code.
+diff --git a/node_modules/class-validator/types/decorator/string/IsISO31661Alpha3.d.ts b/node_modules/class-validator/types/decorator/string/IsISO31661Alpha3.d.ts
+index c37f728..08be17c 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISO31661Alpha3.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISO31661Alpha3.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ISO31661_ALPHA_3 = "isISO31661Alpha3";
+ /**
+  * Check if the string is a valid [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) officially assigned country code.
+diff --git a/node_modules/class-validator/types/decorator/string/IsISO8601.d.ts b/node_modules/class-validator/types/decorator/string/IsISO8601.d.ts
+index a3ebbb3..cb06fd2 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISO8601.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISO8601.d.ts
+@@ -1,15 +1,15 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_ISO8601 = "isIso8601";
+ /**
+  * Checks if the string is a valid ISO 8601 date.
+  * If given value is not a string, then it returns false.
+  * Use the option strict = true for additional checks for a valid date, e.g. invalidates dates like 2019-02-29.
+  */
+-export declare function isISO8601(value: unknown, options?: ValidatorJS.IsISO8601Options): boolean;
++export declare function isISO8601(value: unknown, options?: ValidatorJS.default.IsISO8601Options): boolean;
+ /**
+  * Checks if the string is a valid ISO 8601 date.
+  * If given value is not a string, then it returns false.
+  * Use the option strict = true for additional checks for a valid date, e.g. invalidates dates like 2019-02-29.
+  */
+-export declare function IsISO8601(options?: ValidatorJS.IsISO8601Options, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsISO8601(options?: ValidatorJS.default.IsISO8601Options, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsISRC.d.ts b/node_modules/class-validator/types/decorator/string/IsISRC.d.ts
+index 08d38ce..c0c4fa8 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISRC.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISRC.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ISRC = "isISRC";
+ /**
+  * Check if the string is a ISRC.
+diff --git a/node_modules/class-validator/types/decorator/string/IsISSN.d.ts b/node_modules/class-validator/types/decorator/string/IsISSN.d.ts
+index 7b66780..a5c1ac8 100644
+--- a/node_modules/class-validator/types/decorator/string/IsISSN.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsISSN.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_ISSN = "isISSN";
+ /**
+  * Checks if the string is a ISSN.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isISSN(value: unknown, options?: ValidatorJS.IsISSNOptions): boolean;
++export declare function isISSN(value: unknown, options?: ValidatorJS.default.IsISSNOptions): boolean;
+ /**
+  * Checks if the string is a ISSN.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsISSN(options?: ValidatorJS.IsISSNOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsISSN(options?: ValidatorJS.default.IsISSNOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsIdentityCard.d.ts b/node_modules/class-validator/types/decorator/string/IsIdentityCard.d.ts
+index 62553cf..c3af37f 100644
+--- a/node_modules/class-validator/types/decorator/string/IsIdentityCard.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsIdentityCard.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_IDENTITY_CARD = "isIdentityCard";
+ /**
+  * Check if the string is a valid identity card code.
+@@ -7,11 +7,11 @@ export declare const IS_IDENTITY_CARD = "isIdentityCard";
+  * Defaults to 'any'.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isIdentityCard(value: unknown, locale: ValidatorJS.IdentityCardLocale): boolean;
++export declare function isIdentityCard(value: unknown, locale: ValidatorJS.default.IdentityCardLocale): boolean;
+ /**
+  * Check if the string is a valid identity card code.
+  * locale is one of ['ES', 'zh-TW', 'he-IL', 'ar-TN'] OR 'any'. If 'any' is used, function will check if any of the locals match.
+  * Defaults to 'any'.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsIdentityCard(locale?: ValidatorJS.IdentityCardLocale, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsIdentityCard(locale?: ValidatorJS.default.IdentityCardLocale, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsJSON.d.ts b/node_modules/class-validator/types/decorator/string/IsJSON.d.ts
+index c217083..b2ce346 100644
+--- a/node_modules/class-validator/types/decorator/string/IsJSON.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsJSON.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_JSON = "isJson";
+ /**
+  * Checks if the string is valid JSON (note: uses JSON.parse).
+diff --git a/node_modules/class-validator/types/decorator/string/IsJWT.d.ts b/node_modules/class-validator/types/decorator/string/IsJWT.d.ts
+index 508df81..eb694c4 100644
+--- a/node_modules/class-validator/types/decorator/string/IsJWT.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsJWT.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_JWT = "isJwt";
+ /**
+  * Checks if the string is valid JWT token.
+diff --git a/node_modules/class-validator/types/decorator/string/IsLocale.d.ts b/node_modules/class-validator/types/decorator/string/IsLocale.d.ts
+index e4bf393..be5b493 100644
+--- a/node_modules/class-validator/types/decorator/string/IsLocale.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsLocale.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LOCALE = "isLocale";
+ /**
+  * Check if the string is a locale.
+diff --git a/node_modules/class-validator/types/decorator/string/IsLowercase.d.ts b/node_modules/class-validator/types/decorator/string/IsLowercase.d.ts
+index 2de09e0..ff5cbc6 100644
+--- a/node_modules/class-validator/types/decorator/string/IsLowercase.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsLowercase.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LOWERCASE = "isLowercase";
+ /**
+  * Checks if the string is lowercase.
+diff --git a/node_modules/class-validator/types/decorator/string/IsMacAddress.d.ts b/node_modules/class-validator/types/decorator/string/IsMacAddress.d.ts
+index d73b08f..1fe9c40 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMacAddress.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMacAddress.d.ts
+@@ -1,14 +1,14 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_MAC_ADDRESS = "isMacAddress";
+ /**
+  * Check if the string is a MAC address.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isMACAddress(value: unknown, options?: ValidatorJS.IsMACAddressOptions): boolean;
++export declare function isMACAddress(value: unknown, options?: ValidatorJS.default.IsMACAddressOptions): boolean;
+ /**
+  * Check if the string is a MAC address.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsMACAddress(optionsArg?: ValidatorJS.IsMACAddressOptions, validationOptionsArg?: ValidationOptions): PropertyDecorator;
++export declare function IsMACAddress(optionsArg?: ValidatorJS.default.IsMACAddressOptions, validationOptionsArg?: ValidationOptions): PropertyDecorator;
+ export declare function IsMACAddress(validationOptionsArg?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsMagnetURI.d.ts b/node_modules/class-validator/types/decorator/string/IsMagnetURI.d.ts
+index 167209f..8285415 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMagnetURI.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMagnetURI.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_MAGNET_URI = "isMagnetURI";
+ /**
+  * Check if the string is a magnet uri format.
+diff --git a/node_modules/class-validator/types/decorator/string/IsMilitaryTime.d.ts b/node_modules/class-validator/types/decorator/string/IsMilitaryTime.d.ts
+index ef45027..e94f54b 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMilitaryTime.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMilitaryTime.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_MILITARY_TIME = "isMilitaryTime";
+ /**
+  * Checks if the string represents a time without a given timezone in the format HH:MM (military)
+diff --git a/node_modules/class-validator/types/decorator/string/IsMimeType.d.ts b/node_modules/class-validator/types/decorator/string/IsMimeType.d.ts
+index f7cff19..941a301 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMimeType.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMimeType.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_MIME_TYPE = "isMimeType";
+ /**
+  * Check if the string matches to a valid MIME type format
+diff --git a/node_modules/class-validator/types/decorator/string/IsMobilePhone.d.ts b/node_modules/class-validator/types/decorator/string/IsMobilePhone.d.ts
+index 98a95fa..52c1658 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMobilePhone.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMobilePhone.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_MOBILE_PHONE = "isMobilePhone";
+ /**
+  * Checks if the string is a mobile phone number (locale is either an array of locales (e.g ['sk-SK', 'sr-RS'])
+@@ -13,7 +13,7 @@ export declare const IS_MOBILE_PHONE = "isMobilePhone";
+  * 'zh-HK', 'zh-MO', 'zh-TW']
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isMobilePhone(value: unknown, locale?: ValidatorJS.MobilePhoneLocale, options?: ValidatorJS.IsMobilePhoneOptions): boolean;
++export declare function isMobilePhone(value: unknown, locale?: ValidatorJS.default.MobilePhoneLocale, options?: ValidatorJS.default.IsMobilePhoneOptions): boolean;
+ /**
+  * Checks if the string is a mobile phone number (locale is either an array of locales (e.g ['sk-SK', 'sr-RS'])
+  * OR one of ['am-Am', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', ar-JO', 'ar-KW', 'ar-SA', 'ar-SY', 'ar-TN', 'be-BY',
+@@ -26,4 +26,4 @@ export declare function isMobilePhone(value: unknown, locale?: ValidatorJS.Mobil
+  * 'zh-HK', 'zh-MO', 'zh-TW']
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsMobilePhone(locale?: ValidatorJS.MobilePhoneLocale, options?: ValidatorJS.IsMobilePhoneOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsMobilePhone(locale?: ValidatorJS.default.MobilePhoneLocale, options?: ValidatorJS.default.IsMobilePhoneOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsMongoId.d.ts b/node_modules/class-validator/types/decorator/string/IsMongoId.d.ts
+index 21623ec..a2db0e1 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMongoId.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMongoId.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_MONGO_ID = "isMongoId";
+ /**
+  * Checks if the string is a valid hex-encoded representation of a MongoDB ObjectId.
+diff --git a/node_modules/class-validator/types/decorator/string/IsMultibyte.d.ts b/node_modules/class-validator/types/decorator/string/IsMultibyte.d.ts
+index 4b34e13..0070fb2 100644
+--- a/node_modules/class-validator/types/decorator/string/IsMultibyte.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsMultibyte.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_MULTIBYTE = "isMultibyte";
+ /**
+  * Checks if the string contains one or more multibyte chars.
+diff --git a/node_modules/class-validator/types/decorator/string/IsNumberString.d.ts b/node_modules/class-validator/types/decorator/string/IsNumberString.d.ts
+index 7206fd4..d67fb29 100644
+--- a/node_modules/class-validator/types/decorator/string/IsNumberString.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsNumberString.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_NUMBER_STRING = "isNumberString";
+ /**
+  * Checks if the string is numeric.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isNumberString(value: unknown, options?: ValidatorJS.IsNumericOptions): boolean;
++export declare function isNumberString(value: unknown, options?: ValidatorJS.default.IsNumericOptions): boolean;
+ /**
+  * Checks if the string is numeric.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsNumberString(options?: ValidatorJS.IsNumericOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsNumberString(options?: ValidatorJS.default.IsNumericOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsOctal.d.ts b/node_modules/class-validator/types/decorator/string/IsOctal.d.ts
+index e3b4def..7274b99 100644
+--- a/node_modules/class-validator/types/decorator/string/IsOctal.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsOctal.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_OCTAL = "isOctal";
+ /**
+  * Check if the string is a valid octal number.
+diff --git a/node_modules/class-validator/types/decorator/string/IsPassportNumber.d.ts b/node_modules/class-validator/types/decorator/string/IsPassportNumber.d.ts
+index faa9e1d..f961f5c 100644
+--- a/node_modules/class-validator/types/decorator/string/IsPassportNumber.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsPassportNumber.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_PASSPORT_NUMBER = "isPassportNumber";
+ /**
+  * Check if the string is a valid passport number relative to a specific country code.
+diff --git a/node_modules/class-validator/types/decorator/string/IsPhoneNumber.d.ts b/node_modules/class-validator/types/decorator/string/IsPhoneNumber.d.ts
+index 8b74a88..0d09caa 100644
+--- a/node_modules/class-validator/types/decorator/string/IsPhoneNumber.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsPhoneNumber.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import { CountryCode } from 'libphonenumber-js';
++import type { ValidationOptions } from '../ValidationOptions.js';
++import type { CountryCode } from 'libphonenumber-js';
+ export declare const IS_PHONE_NUMBER = "isPhoneNumber";
+ /**
+  * Checks if the string is a valid phone number. To successfully validate any phone number the text must include
+diff --git a/node_modules/class-validator/types/decorator/string/IsPort.d.ts b/node_modules/class-validator/types/decorator/string/IsPort.d.ts
+index f77fd18..bf42123 100644
+--- a/node_modules/class-validator/types/decorator/string/IsPort.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsPort.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_PORT = "isPort";
+ /**
+  * Check if the string is a valid port number.
+diff --git a/node_modules/class-validator/types/decorator/string/IsPostalCode.d.ts b/node_modules/class-validator/types/decorator/string/IsPostalCode.d.ts
+index 168bcd7..d33f49b 100644
+--- a/node_modules/class-validator/types/decorator/string/IsPostalCode.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsPostalCode.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_POSTAL_CODE = "isPostalCode";
+ /**
+  * Check if the string is a postal code, in the specified locale.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isPostalCode(value: unknown, locale: 'any' | ValidatorJS.PostalCodeLocale): boolean;
++export declare function isPostalCode(value: unknown, locale: 'any' | ValidatorJS.default.PostalCodeLocale): boolean;
+ /**
+  * Check if the string is a postal code, in the specified locale.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsPostalCode(locale?: 'any' | ValidatorJS.PostalCodeLocale, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsPostalCode(locale?: 'any' | ValidatorJS.default.PostalCodeLocale, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsRFC3339.d.ts b/node_modules/class-validator/types/decorator/string/IsRFC3339.d.ts
+index 8972863..698241f 100644
+--- a/node_modules/class-validator/types/decorator/string/IsRFC3339.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsRFC3339.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_RFC_3339 = "isRFC3339";
+ /**
+  * Check if the string is a valid RFC 3339 date.
+diff --git a/node_modules/class-validator/types/decorator/string/IsRgbColor.d.ts b/node_modules/class-validator/types/decorator/string/IsRgbColor.d.ts
+index f406384..4065fdc 100644
+--- a/node_modules/class-validator/types/decorator/string/IsRgbColor.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsRgbColor.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_RGB_COLOR = "isRgbColor";
+ /**
+  * Check if the string is a rgb or rgba color.
+diff --git a/node_modules/class-validator/types/decorator/string/IsSemVer.d.ts b/node_modules/class-validator/types/decorator/string/IsSemVer.d.ts
+index 6e5bc0e..e385193 100644
+--- a/node_modules/class-validator/types/decorator/string/IsSemVer.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsSemVer.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_SEM_VER = "isSemVer";
+ /**
+  * Check if the string is a Semantic Versioning Specification (SemVer).
+diff --git a/node_modules/class-validator/types/decorator/string/IsStrongPassword.d.ts b/node_modules/class-validator/types/decorator/string/IsStrongPassword.d.ts
+index a72222d..1b5697c 100644
+--- a/node_modules/class-validator/types/decorator/string/IsStrongPassword.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsStrongPassword.d.ts
+@@ -1,10 +1,10 @@
+-import validator from 'validator';
+-import { ValidationOptions } from '../ValidationOptions';
++import type * as ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_STRONG_PASSWORD = "isStrongPassword";
+ /**
+  * Options to be passed to IsStrongPassword decorator.
+  */
+-export type IsStrongPasswordOptions = Pick<validator.StrongPasswordOptions, 'minLength' | 'minLowercase' | 'minUppercase' | 'minNumbers' | 'minSymbols'>;
++export type IsStrongPasswordOptions = Pick<ValidatorJS.default.StrongPasswordOptions, 'minLength' | 'minLowercase' | 'minUppercase' | 'minNumbers' | 'minSymbols'>;
+ /**
+  * Checks if the string is a strong password.
+  * If given value is not a string, then it returns false.
+diff --git a/node_modules/class-validator/types/decorator/string/IsSurrogatePair.d.ts b/node_modules/class-validator/types/decorator/string/IsSurrogatePair.d.ts
+index 8e6bacb..6cba678 100644
+--- a/node_modules/class-validator/types/decorator/string/IsSurrogatePair.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsSurrogatePair.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_SURROGATE_PAIR = "isSurrogatePair";
+ /**
+  * Checks if the string contains any surrogate pairs chars.
+diff --git a/node_modules/class-validator/types/decorator/string/IsTimeZone.d.ts b/node_modules/class-validator/types/decorator/string/IsTimeZone.d.ts
+index 4dae544..643f2d8 100644
+--- a/node_modules/class-validator/types/decorator/string/IsTimeZone.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsTimeZone.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_TIMEZONE = "isTimeZone";
+ /**
+  * Checks if the string represents a valid IANA timezone
+diff --git a/node_modules/class-validator/types/decorator/string/IsUUID.d.ts b/node_modules/class-validator/types/decorator/string/IsUUID.d.ts
+index 867face..35884c3 100644
+--- a/node_modules/class-validator/types/decorator/string/IsUUID.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsUUID.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export type UUIDVersion = '3' | '4' | '5' | 'all' | 3 | 4 | 5;
+ export declare const IS_UUID = "isUuid";
+ /**
+diff --git a/node_modules/class-validator/types/decorator/string/IsUppercase.d.ts b/node_modules/class-validator/types/decorator/string/IsUppercase.d.ts
+index 4478baa..757fafa 100644
+--- a/node_modules/class-validator/types/decorator/string/IsUppercase.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsUppercase.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_UPPERCASE = "isUppercase";
+ /**
+  * Checks if the string is uppercase.
+diff --git a/node_modules/class-validator/types/decorator/string/IsUrl.d.ts b/node_modules/class-validator/types/decorator/string/IsUrl.d.ts
+index e450b75..f5b1e3b 100644
+--- a/node_modules/class-validator/types/decorator/string/IsUrl.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsUrl.d.ts
+@@ -1,13 +1,13 @@
+-import { ValidationOptions } from '../ValidationOptions';
+-import ValidatorJS from 'validator';
++import { ValidationOptions } from '../ValidationOptions.js';
++import type * as ValidatorJS from 'validator';
+ export declare const IS_URL = "isUrl";
+ /**
+  * Checks if the string is a url.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function isURL(value: string, options?: ValidatorJS.IsURLOptions): boolean;
++export declare function isURL(value: string, options?: ValidatorJS.default.IsURLOptions): boolean;
+ /**
+  * Checks if the string is a url.
+  * If given value is not a string, then it returns false.
+  */
+-export declare function IsUrl(options?: ValidatorJS.IsURLOptions, validationOptions?: ValidationOptions): PropertyDecorator;
++export declare function IsUrl(options?: ValidatorJS.default.IsURLOptions, validationOptions?: ValidationOptions): PropertyDecorator;
+diff --git a/node_modules/class-validator/types/decorator/string/IsVariableWidth.d.ts b/node_modules/class-validator/types/decorator/string/IsVariableWidth.d.ts
+index c7425ef..8d000af 100644
+--- a/node_modules/class-validator/types/decorator/string/IsVariableWidth.d.ts
++++ b/node_modules/class-validator/types/decorator/string/IsVariableWidth.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_VARIABLE_WIDTH = "isVariableWidth";
+ /**
+  * Checks if the string contains variable-width chars.
+diff --git a/node_modules/class-validator/types/decorator/string/Length.d.ts b/node_modules/class-validator/types/decorator/string/Length.d.ts
+index 37c2378..2ee04e2 100644
+--- a/node_modules/class-validator/types/decorator/string/Length.d.ts
++++ b/node_modules/class-validator/types/decorator/string/Length.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_LENGTH = "isLength";
+ /**
+  * Checks if the string's length falls in a range. Note: this function takes into account surrogate pairs.
+diff --git a/node_modules/class-validator/types/decorator/string/Matches.d.ts b/node_modules/class-validator/types/decorator/string/Matches.d.ts
+index d09d367..2243d77 100644
+--- a/node_modules/class-validator/types/decorator/string/Matches.d.ts
++++ b/node_modules/class-validator/types/decorator/string/Matches.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MATCHES = "matches";
+ /**
+  * Checks if string matches the pattern. Either matches('foo', /foo/i).
+diff --git a/node_modules/class-validator/types/decorator/string/MaxLength.d.ts b/node_modules/class-validator/types/decorator/string/MaxLength.d.ts
+index ffde353..3c40e97 100644
+--- a/node_modules/class-validator/types/decorator/string/MaxLength.d.ts
++++ b/node_modules/class-validator/types/decorator/string/MaxLength.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MAX_LENGTH = "maxLength";
+ /**
+  * Checks if the string's length is not more than given number. Note: this function takes into account surrogate pairs.
+diff --git a/node_modules/class-validator/types/decorator/string/MinLength.d.ts b/node_modules/class-validator/types/decorator/string/MinLength.d.ts
+index 33b4b23..d59928f 100644
+--- a/node_modules/class-validator/types/decorator/string/MinLength.d.ts
++++ b/node_modules/class-validator/types/decorator/string/MinLength.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const MIN_LENGTH = "minLength";
+ /**
+  * Checks if the string's length is not less than given number. Note: this function takes into account surrogate pairs.
+diff --git a/node_modules/class-validator/types/decorator/string/NotContains.d.ts b/node_modules/class-validator/types/decorator/string/NotContains.d.ts
+index 24dc6bf..9735c66 100644
+--- a/node_modules/class-validator/types/decorator/string/NotContains.d.ts
++++ b/node_modules/class-validator/types/decorator/string/NotContains.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const NOT_CONTAINS = "notContains";
+ /**
+  * Checks if the string does not contain the seed.
+diff --git a/node_modules/class-validator/types/decorator/string/is-iso4217-currency-code.d.ts b/node_modules/class-validator/types/decorator/string/is-iso4217-currency-code.d.ts
+index 6ffefe1..17b42e2 100644
+--- a/node_modules/class-validator/types/decorator/string/is-iso4217-currency-code.d.ts
++++ b/node_modules/class-validator/types/decorator/string/is-iso4217-currency-code.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ISO4217_CURRENCY_CODE = "isISO4217CurrencyCode";
+ /**
+  * Check if the string is a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) officially assigned currency code.
+diff --git a/node_modules/class-validator/types/decorator/string/is-tax-id.d.ts b/node_modules/class-validator/types/decorator/string/is-tax-id.d.ts
+index ec8782c..e218375 100644
+--- a/node_modules/class-validator/types/decorator/string/is-tax-id.d.ts
++++ b/node_modules/class-validator/types/decorator/string/is-tax-id.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_TAX_ID = "isTaxId";
+ /**
+  * Checks if the string is a valid tax ID. Default locale is `en-US`.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsArray.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsArray.d.ts
+index d6efc0f..c50c39a 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsArray.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsArray.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ARRAY = "isArray";
+ /**
+  * Checks if a given value is an array
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsBoolean.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsBoolean.d.ts
+index a1daed4..d6cb0dc 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsBoolean.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsBoolean.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_BOOLEAN = "isBoolean";
+ /**
+  * Checks if a given value is a boolean.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsDate.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsDate.d.ts
+index 7407026..669e47e 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsDate.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsDate.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_DATE = "isDate";
+ /**
+  * Checks if a given value is a date.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsEnum.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsEnum.d.ts
+index 2513970..81fa6c2 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsEnum.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsEnum.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_ENUM = "isEnum";
+ /**
+  * Checks if a given value is the member of the provided enum.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsInt.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsInt.d.ts
+index 0604e83..e7e376e 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsInt.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsInt.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_INT = "isInt";
+ /**
+  * Checks if value is an integer.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsNumber.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsNumber.d.ts
+index de9cfb4..d594d41 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsNumber.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsNumber.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_NUMBER = "isNumber";
+ /**
+  * Options to be passed to IsNumber decorator.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsObject.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsObject.d.ts
+index 41d4d26..50b39ee 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsObject.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsObject.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_OBJECT = "isObject";
+ /**
+  * Checks if the value is valid Object.
+diff --git a/node_modules/class-validator/types/decorator/typechecker/IsString.d.ts b/node_modules/class-validator/types/decorator/typechecker/IsString.d.ts
+index 50dbd43..69d9d79 100644
+--- a/node_modules/class-validator/types/decorator/typechecker/IsString.d.ts
++++ b/node_modules/class-validator/types/decorator/typechecker/IsString.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../ValidationOptions';
++import { ValidationOptions } from '../ValidationOptions.js';
+ export declare const IS_STRING = "isString";
+ /**
+  * Checks if a given value is a real string.
+diff --git a/node_modules/class-validator/types/index.d.ts b/node_modules/class-validator/types/index.d.ts
+index 0aedda5..ab2e93c 100644
+--- a/node_modules/class-validator/types/index.d.ts
++++ b/node_modules/class-validator/types/index.d.ts
+@@ -1,18 +1,18 @@
+-import { ValidationError } from './validation/ValidationError';
+-import { ValidatorOptions } from './validation/ValidatorOptions';
+-import { ValidationSchema } from './validation-schema/ValidationSchema';
+-export * from './container';
+-export * from './decorator/decorators';
+-export * from './decorator/ValidationOptions';
+-export * from './validation/ValidatorConstraintInterface';
+-export * from './validation/ValidationError';
+-export * from './validation/ValidatorOptions';
+-export * from './validation/ValidationArguments';
+-export * from './validation/ValidationTypes';
+-export * from './validation/Validator';
+-export * from './validation-schema/ValidationSchema';
+-export * from './register-decorator';
+-export * from './metadata/MetadataStorage';
++import { ValidationError } from './validation/ValidationError.js';
++import { ValidatorOptions } from './validation/ValidatorOptions.js';
++import { ValidationSchema } from './validation-schema/ValidationSchema.js';
++export * from './container.js';
++export * from './decorator/decorators.js';
++export * from './decorator/ValidationOptions.js';
++export * from './validation/ValidatorConstraintInterface.js';
++export * from './validation/ValidationError.js';
++export * from './validation/ValidatorOptions.js';
++export * from './validation/ValidationArguments.js';
++export * from './validation/ValidationTypes.js';
++export * from './validation/Validator.js';
++export * from './validation-schema/ValidationSchema.js';
++export * from './register-decorator.js';
++export * from './metadata/MetadataStorage.js';
+ /**
+  * Validates given object.
+  */
+diff --git a/node_modules/class-validator/types/metadata/ConstraintMetadata.d.ts b/node_modules/class-validator/types/metadata/ConstraintMetadata.d.ts
+index a56b01b..3b162f8 100644
+--- a/node_modules/class-validator/types/metadata/ConstraintMetadata.d.ts
++++ b/node_modules/class-validator/types/metadata/ConstraintMetadata.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidatorConstraintInterface } from '../validation/ValidatorConstraintInterface';
++import { ValidatorConstraintInterface } from '../validation/ValidatorConstraintInterface.js';
+ /**
+  * This metadata interface contains information for custom validators.
+  */
+diff --git a/node_modules/class-validator/types/metadata/MetadataStorage.d.ts b/node_modules/class-validator/types/metadata/MetadataStorage.d.ts
+index 5fadf3a..88d354c 100644
+--- a/node_modules/class-validator/types/metadata/MetadataStorage.d.ts
++++ b/node_modules/class-validator/types/metadata/MetadataStorage.d.ts
+@@ -1,6 +1,6 @@
+-import { ValidationMetadata } from './ValidationMetadata';
+-import { ConstraintMetadata } from './ConstraintMetadata';
+-import { ValidationSchema } from '../validation-schema/ValidationSchema';
++import { ValidationMetadata } from './ValidationMetadata.js';
++import { ConstraintMetadata } from './ConstraintMetadata.js';
++import { ValidationSchema } from '../validation-schema/ValidationSchema.js';
+ /**
+  * Storage all metadatas.
+  */
+diff --git a/node_modules/class-validator/types/metadata/ValidationMetadata.d.ts b/node_modules/class-validator/types/metadata/ValidationMetadata.d.ts
+index 49e19a8..504a664 100644
+--- a/node_modules/class-validator/types/metadata/ValidationMetadata.d.ts
++++ b/node_modules/class-validator/types/metadata/ValidationMetadata.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationMetadataArgs } from './ValidationMetadataArgs';
+-import { ValidationArguments } from '../validation/ValidationArguments';
++import { ValidationMetadataArgs } from './ValidationMetadataArgs.js';
++import { ValidationArguments } from '../validation/ValidationArguments.js';
+ /**
+  * This metadata contains validation rules.
+  */
+diff --git a/node_modules/class-validator/types/metadata/ValidationMetadataArgs.d.ts b/node_modules/class-validator/types/metadata/ValidationMetadataArgs.d.ts
+index cc51858..30e530a 100644
+--- a/node_modules/class-validator/types/metadata/ValidationMetadataArgs.d.ts
++++ b/node_modules/class-validator/types/metadata/ValidationMetadataArgs.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationOptions } from '../decorator/ValidationOptions';
++import { ValidationOptions } from '../decorator/ValidationOptions.js';
+ /**
+  * Constructor arguments for ValidationMetadata class.
+  */
+diff --git a/node_modules/class-validator/types/package.json b/node_modules/class-validator/types/package.json
+new file mode 100644
+index 0000000..4720025
+--- /dev/null
++++ b/node_modules/class-validator/types/package.json
+@@ -0,0 +1,3 @@
++{
++    "type": "module"
++}
+diff --git a/node_modules/class-validator/types/register-decorator.d.ts b/node_modules/class-validator/types/register-decorator.d.ts
+index 48b6e35..edad57d 100644
+--- a/node_modules/class-validator/types/register-decorator.d.ts
++++ b/node_modules/class-validator/types/register-decorator.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidatorConstraintInterface } from './validation/ValidatorConstraintInterface';
+-import { ValidationOptions } from './decorator/ValidationOptions';
++import { ValidatorConstraintInterface } from './validation/ValidatorConstraintInterface.js';
++import { ValidationOptions } from './decorator/ValidationOptions.js';
+ export interface ValidationDecoratorOptions {
+     /**
+      * Target object to be validated.
+diff --git a/node_modules/class-validator/types/utils/index.d.ts b/node_modules/class-validator/types/utils/index.d.ts
+index 0094adf..5cb05f4 100644
+--- a/node_modules/class-validator/types/utils/index.d.ts
++++ b/node_modules/class-validator/types/utils/index.d.ts
+@@ -1,3 +1,3 @@
+-export * from './convert-to-array.util';
+-export * from './get-global.util';
+-export * from './is-promise.util';
++export * from './convert-to-array.util.js';
++export * from './get-global.util.js';
++export * from './is-promise.util.js';
+diff --git a/node_modules/class-validator/types/validation-schema/ValidationSchemaToMetadataTransformer.d.ts b/node_modules/class-validator/types/validation-schema/ValidationSchemaToMetadataTransformer.d.ts
+index 04556b7..0ddd008 100644
+--- a/node_modules/class-validator/types/validation-schema/ValidationSchemaToMetadataTransformer.d.ts
++++ b/node_modules/class-validator/types/validation-schema/ValidationSchemaToMetadataTransformer.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationSchema } from './ValidationSchema';
+-import { ValidationMetadata } from '../metadata/ValidationMetadata';
++import { ValidationSchema } from './ValidationSchema.js';
++import { ValidationMetadata } from '../metadata/ValidationMetadata.js';
+ /**
+  * Used to transform validation schemas to validation metadatas.
+  */
+diff --git a/node_modules/class-validator/types/validation/ValidationExecutor.d.ts b/node_modules/class-validator/types/validation/ValidationExecutor.d.ts
+index ff5cba7..735c82d 100644
+--- a/node_modules/class-validator/types/validation/ValidationExecutor.d.ts
++++ b/node_modules/class-validator/types/validation/ValidationExecutor.d.ts
+@@ -1,7 +1,7 @@
+-import { Validator } from './Validator';
+-import { ValidationError } from './ValidationError';
+-import { ValidationMetadata } from '../metadata/ValidationMetadata';
+-import { ValidatorOptions } from './ValidatorOptions';
++import { Validator } from './Validator.js';
++import { ValidationError } from './ValidationError.js';
++import { ValidationMetadata } from '../metadata/ValidationMetadata.js';
++import { ValidatorOptions } from './ValidatorOptions.js';
+ /**
+  * Executes validation over given object.
+  */
+diff --git a/node_modules/class-validator/types/validation/ValidationUtils.d.ts b/node_modules/class-validator/types/validation/ValidationUtils.d.ts
+index e376f68..b9a9875 100644
+--- a/node_modules/class-validator/types/validation/ValidationUtils.d.ts
++++ b/node_modules/class-validator/types/validation/ValidationUtils.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationArguments } from './ValidationArguments';
++import { ValidationArguments } from './ValidationArguments.js';
+ /**
+  * Convert the constraint to a string to be shown in an error
+  */
+diff --git a/node_modules/class-validator/types/validation/Validator.d.ts b/node_modules/class-validator/types/validation/Validator.d.ts
+index 528c460..5b74ba9 100644
+--- a/node_modules/class-validator/types/validation/Validator.d.ts
++++ b/node_modules/class-validator/types/validation/Validator.d.ts
+@@ -1,5 +1,5 @@
+-import { ValidationError } from './ValidationError';
+-import { ValidatorOptions } from './ValidatorOptions';
++import { ValidationError } from './ValidationError.js';
++import { ValidatorOptions } from './ValidatorOptions.js';
+ /**
+  * Validator performs validation of the given object based on its metadata.
+  */
+diff --git a/node_modules/class-validator/types/validation/ValidatorConstraintInterface.d.ts b/node_modules/class-validator/types/validation/ValidatorConstraintInterface.d.ts
+index 4382f54..5ce10e6 100644
+--- a/node_modules/class-validator/types/validation/ValidatorConstraintInterface.d.ts
++++ b/node_modules/class-validator/types/validation/ValidatorConstraintInterface.d.ts
+@@ -1,4 +1,4 @@
+-import { ValidationArguments } from './ValidationArguments';
++import { ValidationArguments } from './ValidationArguments.js';
+ /**
+  * Custom validators must implement this interface to provide custom validation logic.
+  */

@@ -1,10 +1,14 @@
 import type { GraphQLSchema } from "graphql";
 import { printSchema } from "graphql";
+import type { ResolversMap } from "@/typings";
 import type { BuildSchemaOptions } from "./buildSchema";
 import { buildSchema, buildSchemaSync } from "./buildSchema";
 import { createResolversMap } from "./createResolversMap";
 
-function createTypeDefsAndResolversMap(schema: GraphQLSchema) {
+function createTypeDefsAndResolversMap(schema: GraphQLSchema): {
+  typeDefs: string;
+  resolvers: ResolversMap;
+} {
   const typeDefs = printSchema(schema);
   const resolvers = createResolversMap(schema);
   return { typeDefs, resolvers };

@@ -1,0 +1,35 @@
+{
+  // "extends": "../tsconfig.json",
+  "compilerOptions": {
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    "module": "es2022",
+    "moduleResolution": "node16",
+    "paths": {},
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    "outDir": "./build",
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    "allowSyntheticDefaultImports": true,
+    // "skipLibCheck": true, // If true this masks the fact that the lib is resolving as CommonJS.
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    // "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2022"
+  },
+  "include": ["./simple-usage"]
+}

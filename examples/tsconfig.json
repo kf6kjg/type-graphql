@@ -1,6 +1,11 @@
 {
   "extends": "../tsconfig.json",
-  "compilerOptions": { "outDir": "./build", "paths": {} },
+  "compilerOptions": {
+    "outDir": "./build",
+    "paths": {},
+    "moduleResolution": "node16",
+    "skipLibCheck": false // If true this masks the fact that the lib is resolving as CommonJS.
+  },
   "include": [
     "./apollo-cache",
     "./authorization",

@@ -50,6 +50,7 @@
     "./build"
   ],
   "scripts": {
+    "postinstall": "npx patch-package",
     "prebuild": "npm run clean && npm run check:version",
     "build": "npx tsc --build ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.typings.json",
     "postbuild": "npx shx rm ./build/typings/browser-shim.d.ts && npx shx cp ./src/browser-shim.ts ./build/typings && npx ts-node ./scripts/package.json.ts",

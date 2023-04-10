@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/shelljs/index.d.ts b/node_modules/@types/shelljs/index.d.ts
+index 1676483..a4ac69a 100755
+--- a/node_modules/@types/shelljs/index.d.ts
++++ b/node_modules/@types/shelljs/index.d.ts
+@@ -1206,7 +1206,7 @@ export interface ShellConfig {
+     /**
+      * Passed to glob.sync() instead of the default options ({}).
+      */
+-    globOptions: glob.IOptions;
++    globOptions: glob.GlobOptions;
+ 
+     /**
+      * Absolute path of the Node binary. Default is null (inferred).
